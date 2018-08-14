@@ -11,3 +11,9 @@
 # 引数は、配列の0番目から処理という意味
 array = 1..6
 array.inject (0)  { |sum, num| p sum += num }
+
+## each_with_index
+# 要素の数だけブロックを繰り返し処理を行う
+%w(ruby js python).each_with_index do |value, key|
+  puts "#{key}番目は、#{value}"
+end
