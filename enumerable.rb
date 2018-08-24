@@ -17,3 +17,16 @@ array.inject (0)  { |sum, num| p sum += num }
 %w(ruby js python).each_with_index do |value, key|
   puts "#{key}番目は、#{value}"
 end
+
+### each_with_index
+# 数字と要素を実行結果として返してくれる
+# 単なるオブジェクトの場合
+array = ["ruby", "python", "unity"]
+array.each_with_index do |item, i|
+  puts "番号#{i+1}は#{item}です"
+end
+# hashの場合
+hash = {one: "いち", two: "に", three: "さん"}
+hash.each_with_index do |(key, value), i|
+  puts "#{key}から取り出されるのは#{value}です"
+end
